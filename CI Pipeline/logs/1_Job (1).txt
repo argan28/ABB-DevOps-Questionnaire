@@ -1,0 +1,260 @@
+2025-02-15T18:02:19.2313134Z ##[section]Starting: Job
+2025-02-15T18:02:20.5486863Z ##[section]Starting: Initialize job
+2025-02-15T18:02:20.5489577Z Agent name: 'TerraformAgent'
+2025-02-15T18:02:20.5489867Z Agent machine name: 'nodejsvm'
+2025-02-15T18:02:20.5489991Z Current agent version: '3.220.2'
+2025-02-15T18:02:20.5504040Z Agent running as: 'azuser'
+2025-02-15T18:02:20.5539617Z Prepare build directory.
+2025-02-15T18:02:20.5861953Z Set build variables.
+2025-02-15T18:02:20.5892685Z Download all required tasks.
+2025-02-15T18:02:20.6120943Z Checking job knob settings.
+2025-02-15T18:02:20.6130757Z    Knob: DockerActionRetries = true Source: $(VSTSAGENT_DOCKER_ACTION_RETRIES) 
+2025-02-15T18:02:20.6133229Z    Knob: ContinueAfterCancelProcessTreeKillAttempt = true Source: $(VSTSAGENT_CONTINUE_AFTER_CANCEL_PROCESSTREEKILL_ATTEMPT) 
+2025-02-15T18:02:20.6133640Z Finished checking job knob settings.
+2025-02-15T18:02:20.6431370Z Start tracking orphan processes.
+2025-02-15T18:02:20.6572201Z ##[section]Finishing: Initialize job
+2025-02-15T18:02:20.6751201Z ##[section]Async Command Start: DetectDockerContainer
+2025-02-15T18:02:20.6751480Z ##[section]Async Command End: DetectDockerContainer
+2025-02-15T18:02:20.6752016Z ##[section]Async Command Start: DetectDockerContainer
+2025-02-15T18:02:20.6752253Z ##[section]Async Command End: DetectDockerContainer
+2025-02-15T18:02:20.6937282Z ##[section]Starting: Checkout nodejs-application@another-test to s
+2025-02-15T18:02:20.7147004Z ==============================================================================
+2025-02-15T18:02:20.7147569Z Task         : Get sources
+2025-02-15T18:02:20.7147799Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2025-02-15T18:02:20.7147931Z Version      : 1.0.0
+2025-02-15T18:02:20.7148155Z Author       : Microsoft
+2025-02-15T18:02:20.7148736Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2025-02-15T18:02:20.7148855Z ==============================================================================
+2025-02-15T18:02:25.2302387Z Syncing repository: nodejs-application (Git)
+2025-02-15T18:02:25.2308981Z ##[command]git version
+2025-02-15T18:02:25.2314466Z git version 2.43.0
+2025-02-15T18:02:25.2315935Z ##[command]git config --get remote.origin.url
+2025-02-15T18:02:25.2322823Z ##[command]git clean -ffdx
+2025-02-15T18:02:25.2327325Z Removing node_modules/
+2025-02-15T18:02:25.2327895Z Removing package-lock.json
+2025-02-15T18:02:25.2329223Z ##[command]git reset --hard HEAD
+2025-02-15T18:02:25.2333853Z HEAD is now at 5ab822e Update azure-pipelines1.yml for Azure Pipelines
+2025-02-15T18:02:25.2339845Z ##[command]git config gc.auto 0
+2025-02-15T18:02:25.2345510Z ##[command]git config --get-all http.https://arijitganguly0822@dev.azure.com/arijitganguly0822/nodejs-application/_git/nodejs-application.extraheader
+2025-02-15T18:02:25.2351587Z ##[command]git config --get-all http.extraheader
+2025-02-15T18:02:25.2357291Z ##[command]git config --get-regexp .*extraheader
+2025-02-15T18:02:25.2363197Z ##[command]git config --get-all http.proxy
+2025-02-15T18:02:25.2369006Z ##[command]git config http.version HTTP/1.1
+2025-02-15T18:02:25.2376642Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1 +4ac313b34a854574dc78a28923461dd8ccc087dc:refs/remotes/origin/4ac313b34a854574dc78a28923461dd8ccc087dc
+2025-02-15T18:02:25.2381192Z remote: Azure Repos        
+2025-02-15T18:02:25.2381391Z remote: 
+2025-02-15T18:02:25.2381558Z remote: Found 27 objects to send. (0 ms)        
+2025-02-15T18:02:25.2381959Z From https://dev.azure.com/arijitganguly0822/nodejs-application/_git/nodejs-application
+2025-02-15T18:02:25.2382452Z  * [new ref]         4ac313b34a854574dc78a28923461dd8ccc087dc -> origin/4ac313b34a854574dc78a28923461dd8ccc087dc
+2025-02-15T18:02:26.2583580Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1 +4ac313b34a854574dc78a28923461dd8ccc087dc
+2025-02-15T18:02:26.2588423Z remote: Azure Repos        
+2025-02-15T18:02:26.2588609Z remote: 
+2025-02-15T18:02:26.2588813Z remote: Found 0 objects to send. (0 ms)        
+2025-02-15T18:02:26.2589240Z From https://dev.azure.com/arijitganguly0822/nodejs-application/_git/nodejs-application
+2025-02-15T18:02:26.2589668Z  * branch            4ac313b34a854574dc78a28923461dd8ccc087dc -> FETCH_HEAD
+2025-02-15T18:02:28.3536067Z ##[command]git checkout --progress --force refs/remotes/origin/4ac313b34a854574dc78a28923461dd8ccc087dc
+2025-02-15T18:02:28.3540463Z Previous HEAD position was 5ab822e Update azure-pipelines1.yml for Azure Pipelines
+2025-02-15T18:02:28.3540824Z HEAD is now at 4ac313b Update azure-pipelines1.yml for Azure Pipelines
+2025-02-15T18:02:28.3593794Z ##[section]Finishing: Checkout nodejs-application@another-test to s
+2025-02-15T18:02:28.3615946Z ##[section]Starting: Install Node.js
+2025-02-15T18:02:28.3620083Z ==============================================================================
+2025-02-15T18:02:28.3620216Z Task         : Use Node.js ecosystem
+2025-02-15T18:02:28.3620294Z Description  : Set up a Node.js environment and add it to the PATH, additionally providing proxy support
+2025-02-15T18:02:28.3620440Z Version      : 1.248.1
+2025-02-15T18:02:28.3620510Z Author       : Microsoft Corporation
+2025-02-15T18:02:28.3620588Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks
+2025-02-15T18:02:28.3620703Z ==============================================================================
+2025-02-15T18:02:29.5255147Z Found tool in cache: node 16.20.2 x64
+2025-02-15T18:02:29.5256969Z Prepending PATH environment variable with directory: /home/azuser/myagent/_work/_tool/node/16.20.2/x64/bin
+2025-02-15T18:02:30.7913262Z ##[section]Finishing: Install Node.js
+2025-02-15T18:02:30.7933370Z ##[section]Starting: npm install
+2025-02-15T18:02:30.7937583Z ==============================================================================
+2025-02-15T18:02:30.7937725Z Task         : Command line
+2025-02-15T18:02:30.7937818Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-02-15T18:02:30.7937971Z Version      : 2.250.1
+2025-02-15T18:02:30.7938048Z Author       : Microsoft Corporation
+2025-02-15T18:02:30.7938138Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-02-15T18:02:30.7938457Z ==============================================================================
+2025-02-15T18:02:32.5948578Z Generating script.
+2025-02-15T18:02:32.5953664Z Script contents:
+2025-02-15T18:02:32.5954071Z npm install
+2025-02-15T18:02:32.5954867Z ========================== Starting Command Output ===========================
+2025-02-15T18:02:32.5972468Z [command]/usr/bin/bash --noprofile --norc /home/azuser/myagent/_work/_temp/7a6ab5b5-b00c-4841-af74-6e9e8e0b31b6.sh
+2025-02-15T18:02:44.2413274Z npm WARN deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-02-15T18:02:44.2793500Z npm WARN deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+2025-02-15T18:02:44.3810719Z npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+2025-02-15T18:02:44.4049137Z npm WARN deprecated @humanwhocodes/config-array@0.5.0: Use @eslint/config-array instead
+2025-02-15T18:02:44.4163671Z npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+2025-02-15T18:02:44.4241231Z npm WARN deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2025-02-15T18:02:44.4894363Z npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+2025-02-15T18:02:44.5318565Z npm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-02-15T18:02:44.5599579Z npm WARN deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+2025-02-15T18:02:44.5632600Z npm WARN deprecated domexception@2.0.1: Use your platform's native DOMException instead
+2025-02-15T18:02:44.5861214Z npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+2025-02-15T18:02:44.6356994Z npm WARN deprecated sane@4.1.0: some dependency vulnerabilities fixed, support for node < 10 dropped, and newer ECMAScript syntax/features added
+2025-02-15T18:02:44.7160147Z npm WARN deprecated @humanwhocodes/object-schema@1.2.1: Use @eslint/object-schema instead
+2025-02-15T18:02:44.9205933Z npm WARN deprecated superagent@8.1.2: Please upgrade to v9.0.0+ as we have fixed a public vulnerability with formidable dependency. Note that v9.0.0+ requires Node.js v14.18.0+. See https://github.com/ladjs/superagent/pull/1800 for insight. This project is supported and maintained by the team at Forward Email @ https://forwardemail.net
+2025-02-15T18:02:45.7084544Z npm WARN deprecated eslint@7.32.0: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2025-02-15T18:02:46.1601468Z 
+2025-02-15T18:02:46.1609317Z added 773 packages, and audited 774 packages in 13s
+2025-02-15T18:02:46.1619841Z 
+2025-02-15T18:02:46.1620203Z 129 packages are looking for funding
+2025-02-15T18:02:46.1620398Z   run `npm fund` for details
+2025-02-15T18:02:46.2144526Z 
+2025-02-15T18:02:46.2145293Z 21 vulnerabilities (16 moderate, 5 high)
+2025-02-15T18:02:46.2148983Z 
+2025-02-15T18:02:46.2149564Z To address issues that do not require attention, run:
+2025-02-15T18:02:46.2150531Z   npm audit fix
+2025-02-15T18:02:46.2150598Z 
+2025-02-15T18:02:46.2150783Z To address all issues (including breaking changes), run:
+2025-02-15T18:02:46.2151185Z   npm audit fix --force
+2025-02-15T18:02:46.2151554Z 
+2025-02-15T18:02:46.2151723Z Run `npm audit` for details.
+2025-02-15T18:02:46.2454523Z ##[section]Finishing: npm install
+2025-02-15T18:02:46.2474267Z ##[section]Starting: Run ESLint
+2025-02-15T18:02:46.2477992Z ==============================================================================
+2025-02-15T18:02:46.2478209Z Task         : Command line
+2025-02-15T18:02:46.2478426Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-02-15T18:02:46.2478546Z Version      : 2.250.1
+2025-02-15T18:02:46.2478620Z Author       : Microsoft Corporation
+2025-02-15T18:02:46.2478721Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-02-15T18:02:46.2478838Z ==============================================================================
+2025-02-15T18:02:48.2022837Z Generating script.
+2025-02-15T18:02:48.2026508Z Script contents:
+2025-02-15T18:02:48.2027873Z npm run lint || true
+2025-02-15T18:02:48.2029436Z ========================== Starting Command Output ===========================
+2025-02-15T18:02:48.2044272Z [command]/usr/bin/bash --noprofile --norc /home/azuser/myagent/_work/_temp/27ec18ac-5894-46d8-86ed-4ae069ea63f4.sh
+2025-02-15T18:02:48.5126891Z 
+2025-02-15T18:02:48.5133216Z > js-e2e-express-server@1.0.0 lint
+2025-02-15T18:02:48.5133450Z > eslint src/**/*.js --fix
+2025-02-15T18:02:48.5133527Z 
+2025-02-15T18:02:49.2750145Z 
+2025-02-15T18:02:49.2751970Z /home/azuser/myagent/_work/1/s/src/server.test.js
+2025-02-15T18:02:49.2753399Z   2:28  error  Unexpected use of file extension "js" for "./server.js"  import/extensions
+2025-02-15T18:02:49.2754670Z 
+2025-02-15T18:02:49.2756014Z /home/azuser/myagent/_work/1/s/src/utils.js
+2025-02-15T18:02:49.2757667Z   30:9   error    Identifier 'src_ip' is not in camel case  camelcase
+2025-02-15T18:02:49.2759372Z   36:20  warning  Unexpected unnamed function               func-names
+2025-02-15T18:02:49.2763649Z   39:20  error    Identifier 'src_ip' is not in camel case  camelcase
+2025-02-15T18:02:49.2763974Z   55:38  error    'next' is defined but never used          no-unused-vars
+2025-02-15T18:02:49.2764115Z 
+2025-02-15T18:02:49.2764586Z ✖ 5 problems (4 errors, 1 warning)
+2025-02-15T18:02:49.2764673Z 
+2025-02-15T18:02:49.2961938Z ##[section]Finishing: Run ESLint
+2025-02-15T18:02:49.2981363Z ##[section]Starting: npm test
+2025-02-15T18:02:49.2985059Z ==============================================================================
+2025-02-15T18:02:49.2985195Z Task         : Command line
+2025-02-15T18:02:49.2985266Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2025-02-15T18:02:49.2985404Z Version      : 2.250.1
+2025-02-15T18:02:49.2985471Z Author       : Microsoft Corporation
+2025-02-15T18:02:49.2985558Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2025-02-15T18:02:49.2985686Z ==============================================================================
+2025-02-15T18:02:51.1669976Z Generating script.
+2025-02-15T18:02:51.1674910Z Script contents:
+2025-02-15T18:02:51.1676446Z npm test
+2025-02-15T18:02:51.1677786Z ========================== Starting Command Output ===========================
+2025-02-15T18:02:51.1692878Z [command]/usr/bin/bash --noprofile --norc /home/azuser/myagent/_work/_temp/2154ea23-74ad-4bf3-bacc-20684fb0da7d.sh
+2025-02-15T18:02:51.4990288Z 
+2025-02-15T18:02:51.4992742Z > js-e2e-express-server@1.0.0 test
+2025-02-15T18:02:51.4993531Z > jest --detectOpenHandles --coverage
+2025-02-15T18:02:51.4993868Z 
+2025-02-15T18:02:53.5653126Z PASS src/server.test.js
+2025-02-15T18:02:53.5659751Z   root
+2025-02-15T18:02:53.5662575Z     ✓ request root, returns html (117 ms)
+2025-02-15T18:02:53.5667121Z     ✓ request invalid path, returns 404 (16 ms)
+2025-02-15T18:02:53.5667228Z 
+2025-02-15T18:02:53.5667492Z   console.log
+2025-02-15T18:02:53.5668074Z     ::ffff:127.0.0.1 - GET / 200 12.551 ms {
+2025-02-15T18:02:53.5669965Z       url: '/',
+2025-02-15T18:02:53.5677255Z       status: 200,
+2025-02-15T18:02:53.5677769Z       processTimeMs: 12.55091,
+2025-02-15T18:02:53.5678621Z       src_ip: '::ffff:127.0.0.1'
+2025-02-15T18:02:53.5678981Z     }
+2025-02-15T18:02:53.5682256Z 
+2025-02-15T18:02:53.5682744Z       at ServerResponse.<anonymous> (src/utils.js:40:13)
+2025-02-15T18:02:53.5682986Z 
+2025-02-15T18:02:53.5683292Z   console.log
+2025-02-15T18:02:53.5683731Z     ::ffff:127.0.0.1 - GET /invalid-path 404 4.267 ms {
+2025-02-15T18:02:53.5689239Z       url: '/invalid-path',
+2025-02-15T18:02:53.5689647Z       status: 404,
+2025-02-15T18:02:53.5690014Z       processTimeMs: 4.266637,
+2025-02-15T18:02:53.5690382Z       src_ip: '::ffff:127.0.0.1'
+2025-02-15T18:02:53.5691280Z     }
+2025-02-15T18:02:53.5691459Z 
+2025-02-15T18:02:53.5691962Z       at ServerResponse.<anonymous> (src/utils.js:40:13)
+2025-02-15T18:02:53.5692159Z 
+2025-02-15T18:02:53.5778673Z -----------|---------|----------|---------|---------|-------------------------------
+2025-02-15T18:02:53.5779298Z File       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s             
+2025-02-15T18:02:53.5779936Z -----------|---------|----------|---------|---------|-------------------------------
+2025-02-15T18:02:53.5784481Z All files  |    70.9 |       50 |   46.15 |    70.9 |                               
+2025-02-15T18:02:53.5784908Z  server.js |     100 |      100 |     100 |     100 |                               
+2025-02-15T18:02:53.5785456Z  utils.js  |   60.97 |       50 |   36.36 |   60.97 | 3-4,7-13,19,45-46,49-52,56-57 
+2025-02-15T18:02:53.5789997Z -----------|---------|----------|---------|---------|-------------------------------
+2025-02-15T18:02:53.5931314Z Test Suites: 1 passed, 1 total
+2025-02-15T18:02:53.5931509Z Tests:       2 passed, 2 total
+2025-02-15T18:02:53.5931728Z Snapshots:   0 total
+2025-02-15T18:02:53.5931933Z Time:        1.623 s
+2025-02-15T18:02:53.5932130Z Ran all test suites.
+2025-02-15T18:02:53.6532237Z ##[section]Finishing: npm test
+2025-02-15T18:02:53.6551671Z ##[section]Starting: Copy project files
+2025-02-15T18:02:53.6556623Z ==============================================================================
+2025-02-15T18:02:53.6556797Z Task         : Copy files
+2025-02-15T18:02:53.6556867Z Description  : Copy files from a source folder to a target folder using patterns matching file paths (not folder paths)
+2025-02-15T18:02:53.6557171Z Version      : 2.246.0
+2025-02-15T18:02:53.6557241Z Author       : Microsoft Corporation
+2025-02-15T18:02:53.6557320Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/copy-files
+2025-02-15T18:02:53.6557484Z ==============================================================================
+2025-02-15T18:02:56.0946102Z found 5 files
+2025-02-15T18:02:56.0947683Z Copying /home/azuser/myagent/_work/1/s/public/client.html to /home/azuser/myagent/_work/1/a/public/client.html
+2025-02-15T18:02:56.0949183Z Copying /home/azuser/myagent/_work/1/s/src/index.js to /home/azuser/myagent/_work/1/a/src/index.js
+2025-02-15T18:02:56.0949733Z Copying /home/azuser/myagent/_work/1/s/src/server.js to /home/azuser/myagent/_work/1/a/src/server.js
+2025-02-15T18:02:56.0950288Z Copying /home/azuser/myagent/_work/1/s/src/server.test.js to /home/azuser/myagent/_work/1/a/src/server.test.js
+2025-02-15T18:02:56.0950848Z Copying /home/azuser/myagent/_work/1/s/src/utils.js to /home/azuser/myagent/_work/1/a/src/utils.js
+2025-02-15T18:02:56.0952741Z ##[section]Finishing: Copy project files
+2025-02-15T18:02:56.0970207Z ##[section]Starting: Publish npm artifact
+2025-02-15T18:02:56.0974223Z ==============================================================================
+2025-02-15T18:02:56.0974348Z Task         : Publish Pipeline Artifacts
+2025-02-15T18:02:56.0974467Z Description  : Publish (upload) a file or directory as a named artifact for the current run
+2025-02-15T18:02:56.0974585Z Version      : 1.242.0
+2025-02-15T18:02:56.0974666Z Author       : Microsoft Corporation
+2025-02-15T18:02:56.0974745Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/publish-pipeline-artifact
+2025-02-15T18:02:56.0974868Z ==============================================================================
+2025-02-15T18:02:57.8095298Z Artifact name input: e2e-server
+2025-02-15T18:02:57.8201388Z Uploading pipeline artifact from /home/azuser/myagent/_work/1/a for build #9
+2025-02-15T18:02:57.8570961Z Using default max parallelism.
+2025-02-15T18:02:57.8589094Z Max dedup parallelism: 192
+2025-02-15T18:03:08.5350048Z ApplicationInsightsTelemetrySender will correlate events with X-TFS-Session 9aa3b23c-0626-4223-b413-8dd05a919299
+2025-02-15T18:03:08.5552001Z DedupManifestArtifactClient will correlate http requests with X-TFS-Session 9aa3b23c-0626-4223-b413-8dd05a919299
+2025-02-15T18:03:08.6788135Z 5 files processed.
+2025-02-15T18:03:08.6797295Z Processed 5 files from /home/azuser/myagent/_work/1/a successfully.
+2025-02-15T18:03:11.9565245Z Uploaded 4,537 out of 4,537 bytes
+2025-02-15T18:03:11.9565926Z Content upload is done!
+2025-02-15T18:03:11.9577482Z 
+2025-02-15T18:03:11.9578649Z Content upload statistics:
+2025-02-15T18:03:11.9579006Z Total Content: 8.4 KB
+2025-02-15T18:03:11.9579403Z Physical Content Uploaded: 2.7 KB
+2025-02-15T18:03:11.9580928Z Logical Content Uploaded: 4.5 KB
+2025-02-15T18:03:11.9581297Z Compression Saved: 1.8 KB
+2025-02-15T18:03:11.9583836Z Deduplication Saved: 3.9 KB
+2025-02-15T18:03:11.9584407Z Number of Chunks Uploaded: 6
+2025-02-15T18:03:11.9584776Z Total Number of Chunks: 11
+2025-02-15T18:03:11.9585015Z 
+2025-02-15T18:03:13.9414244Z Associated artifact 1 with build 9
+2025-02-15T18:03:13.9414919Z ApplicationInsightsTelemetrySender correlated 2 events with X-TFS-Session 9aa3b23c-0626-4223-b413-8dd05a919299
+2025-02-15T18:03:13.9415219Z Uploading pipeline artifact finished.
+2025-02-15T18:03:13.9417079Z ##[section]Finishing: Publish npm artifact
+2025-02-15T18:03:13.9457482Z ##[section]Starting: Checkout nodejs-application@another-test to s
+2025-02-15T18:03:13.9460404Z ==============================================================================
+2025-02-15T18:03:13.9460568Z Task         : Get sources
+2025-02-15T18:03:13.9460649Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2025-02-15T18:03:13.9460785Z Version      : 1.0.0
+2025-02-15T18:03:13.9460877Z Author       : Microsoft
+2025-02-15T18:03:13.9461119Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2025-02-15T18:03:13.9461242Z ==============================================================================
+2025-02-15T18:03:16.3577165Z Cleaning any cached credential from repository: nodejs-application (Git)
+2025-02-15T18:03:16.3682979Z ##[section]Finishing: Checkout nodejs-application@another-test to s
+2025-02-15T18:03:16.3790937Z ##[section]Starting: Finalize Job
+2025-02-15T18:03:16.3820876Z Cleaning up task key
+2025-02-15T18:03:16.3821671Z Start cleaning up orphan processes.
+2025-02-15T18:03:16.4072981Z ##[section]Finishing: Finalize Job
+2025-02-15T18:03:16.4133376Z ##[section]Finishing: Job
